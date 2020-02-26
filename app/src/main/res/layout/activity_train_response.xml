@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.TrainResponseActivity">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimaryDark"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX=".6"
+        android:scaleY=".6"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerInParent="true"
+        app:lottie_rawRes="@raw/loading"/>
+
+    <LinearLayout
+        android:id="@+id/noTrains"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/notrain"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="No trains found en route\nTry searching trains another day"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
